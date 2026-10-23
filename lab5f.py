@@ -9,10 +9,19 @@
 
 def safe_divide(a,b):
   # divide a by b
+
   # Add an exception block to raise the error if error occurs because of a zero denominator.
+  try: 
+    result = a/b
+    print("The result is: ",result)
+
+  except ZeroDivisionError:
+    print("Cannont divide by zero")  
   # Except block should display the appropriate error messages
 
 def main():
   safe_divide(10,5)  # works
   safe_divide(10,0)  # exception : Zero Division Error
-  
+
+
+main()
